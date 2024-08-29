@@ -2,12 +2,7 @@ package hotel.task;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.targets.Target;
-import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;

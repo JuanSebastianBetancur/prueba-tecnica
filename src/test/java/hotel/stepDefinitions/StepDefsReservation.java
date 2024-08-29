@@ -2,7 +2,6 @@ package hotel.stepDefinitions;
 
 import hotel.question.VerifyText;
 import hotel.task.*;
-import hotel.ui.Login;
 import hotel.ui.Reservation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -72,7 +71,7 @@ public class StepDefsReservation {
 
     @And("the user selects the cheapest hotel that meets the filters")
     public void theUserSelectsTheCheapestHotelThatMeetsTheFilters() {
-        theActorInTheSpotlight().attemptsTo(TaskSelectHotelWithLowestPrice.set(null));
+        theActorInTheSpotlight().attemptsTo(TaskSelectHotelWithLowestPrice.set());
     }
 
     @Then("the user should see the message {string}")

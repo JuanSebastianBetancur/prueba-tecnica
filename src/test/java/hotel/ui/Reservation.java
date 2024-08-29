@@ -15,4 +15,5 @@ public class Reservation {
     public static final Target CHECK_STAR_2 = Target.the("uncheck star 2").located(By.id("MainContentPlaceHolder_FilterFormLayout_OurRatingCheckBoxList_RB1"));
     public static final Target BUTTON_APPLY_FILTERS = Target.the("button apply filters").located(By.id("MainContentPlaceHolder_FilterFormLayout_ApplyFilterButton"));
     public static final Target FIELD_RESERVATION_CONFIRMS = Target.the("field reservation confirms").located(By.xpath("//*[@id=\"form1\"]/div[3]/div[2]/div[4]/div[2]/h3"));
+    public static final Target PRICE_LOCATOR = Target.the("Price labels").locatedBy("//td[@class='dxdvItem_Metropolis item dx-al']//div[@class='price']");
 }

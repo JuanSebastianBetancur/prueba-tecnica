@@ -1,9 +1,9 @@
 package hotel.task;
 
+import hotel.ui.Reservation;
 import net.serenitybdd.core.pages.ListOfWebElementFacades;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.Task;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,14 +12,11 @@ import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
 
 public class TaskSelectHotelWithLowestPrice implements Task {
 
-    private Target priceLocator = Target.the("Price labels").locatedBy("//td[@class='dxdvItem_Metropolis item dx-al']//div[@class='price']");
-
-    public TaskSelectHotelWithLowestPrice(Target target) {
-//        this.priceLocator = target;
+    public TaskSelectHotelWithLowestPrice() {
     }
 
-    public static TaskSelectHotelWithLowestPrice set(Target target) {
-        return new TaskSelectHotelWithLowestPrice(target);
+    public static TaskSelectHotelWithLowestPrice set() {
+        return new TaskSelectHotelWithLowestPrice();
     }
 
     @Override
@@ -27,7 +24,7 @@ public class TaskSelectHotelWithLowestPrice implements Task {
         WebDriver driver = ThucydidesWebDriverSupport.getDriver();
 
         // Obtener todos los elementos que contienen precios
-        ListOfWebElementFacades priceElements = priceLocator.resolveAllFor(actor);
+        ListOfWebElementFacades priceElements = Reservation.PRICE_LOCATOR.resolveAllFor(actor);
 
         double minPrice = Double.MAX_VALUE;
         WebElement minPriceElement = null;
